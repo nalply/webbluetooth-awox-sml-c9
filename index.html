@@ -1,9 +1,20 @@
 <head>
-  <title>Awox Experiment</title>
+  <title>Control AwoX SML-c9 smart bulbs</title>
   <script src=index.js></script>
+  <link rel=stylesheet href=index.css>
 </head>
-<html>
-  <button id=connect>Connect</button>    
-  <button id=on>on</button>
-  <button id=off>off</button>
-</html>
+<body>
+  <h1>Control AwoX SML-c9 smart bulbs</h1>
+  <button id=connection>connect</button>    
+  <div id=panel data-show=false>
+    <button id=on>on</button>
+    <button id=off>off</button>
+    <br>
+    <canvas id=colorsUI></canvas>
+    <br>
+    <span style=display:inline-block;background:black;width:20px;>&nbsp;</span>
+    <input type=range id=lightness>
+    <span style=display:inline-block;background:white;width:20px;>&nbsp;</span>
+  </div>
+  <span id=cconv data-show=false>Color Converter</span>
+</body>
