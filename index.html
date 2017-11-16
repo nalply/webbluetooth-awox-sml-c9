@@ -1,4 +1,5 @@
 <head>
+  <meta charset=utf-8>
   <title>Control AwoX SML-c9 smart bulbs</title>
   <script src=index.js></script>
   <link rel=stylesheet href=index.css>
@@ -9,12 +10,34 @@
   <div id=panel data-show=false>
     <button id=on>on</button>
     <button id=off>off</button>
-    <br>
+    <hr>
     <canvas id=colorsUI></canvas>
     <br>
-    <span style=display:inline-block;background:black;width:20px;>&nbsp;</span>
+    <span style=display:inline-block;background:black;width:20px>&nbsp;</span>
     <input type=range id=lightness>
-    <span style=display:inline-block;background:white;width:20px;>&nbsp;</span>
+    <span style=display:inline-block;background:white;width:20px>&nbsp;</span>
+    <hr>
+    <b>Advanced: Send command</b>
+    <br>
+    <span style=text-align:left;display:inline-block;width:100%>
+      <select id=command>
+        <option>brightness</option>
+        <option>white</option>
+        <option value=white_reset>white reset</option>
+        <option>rgb</option>
+        <option value=rgb_reset>rgb reset</option>
+      </select>
+      <span class=params id=cmd_brightness>
+        <input id=param_brightness type=number min=0 max=28 step=1 width=3 value=14>
+        <small>0…28</small>
+        <button class=go data-command=brightness>go!</button>
+      </span>
+      <span class=params id=cmd_rgb>
+        <input id=param_rgb type=text size=8 placeholder='css color'>
+        <input id=param_slow type=checkbox><small>slow</small>
+        <button class=go data-command=rgb>go!</button>
+      </span>
+    </span>
   </div>
   <span id=cconv data-show=false>Color Converter</span>
 </body>

@@ -2,6 +2,6 @@
 html { padding:5px;background: #eee;text-align:center;font:16px Arial; }
 body { width:450px;padding:5px;background:#ccc;margin:0 auto; }
 h1 { font-size:120%; }
-[data-show=false] { visibility:hidden; }
+[data-show=false] { display:none; }
 #panel { margin:20px;padding:5px;border:1px solid gray;background:#bbb; }
-#colorsUI { width:200px;height:200px;margin:20px 0 5px 0;background:#ddd; }
+#colorsUI { width:200px;height:200px;background:#ddd; }
